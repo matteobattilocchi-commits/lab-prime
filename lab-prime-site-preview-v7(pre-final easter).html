@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB PRIME</title>
+  <meta name="description" content="LAB PRIME is a specialist science operations consultancy supporting research-driven organisations to design, stabilise, and improve laboratory environments." />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet">
+  <style>
+    :root,[data-theme="light"]{
+      --color-bg:#f4f7fb;
+      --color-surface:#fbfcfe;
+      --color-surface-2:#f5f8fc;
+      --color-surface-offset:#edf2f8;
+      --color-border:rgba(24,39,64,.12);
+      --color-divider:rgba(24,39,64,.08);
+      --color-text:#182740;
+      --color-text-muted:#5e6c82;
+      --color-text-faint:#8d98aa;
+      --color-primary:#155a9c;
+      --color-primary-hover:#0f477b;
+      --color-primary-soft:#dbe9f6;
+      --color-accent:#2b7bbb;
+      --shadow-sm:0 10px 30px rgba(20,38,63,.06);
+      --shadow-md:0 18px 50px rgba(20,38,63,.08);
+      --radius-sm:12px;
+      --radius-md:18px;
+      --radius-lg:28px;
+      --space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;
+      --font-body:'General Sans',Inter,system-ui,sans-serif;
+      --font-display:'Cabinet Grotesk','General Sans',Inter,system-ui,sans-serif;
+    }
+    [data-theme="dark"]{
+      --color-bg:#0e1726;
+      --color-surface:#111d30;
+      --color-surface-2:#152235;
+      --color-surface-offset:#182740;
+      --color-border:rgba(214,226,241,.12);
+      --color-divider:rgba(214,226,241,.08);
+      --color-text:#e3ecf7;
+      --color-text-muted:#a9b8ca;
+      --color-text-faint:#73839a;
+      --color-primary:#6caee6;
+      --color-primary-hover:#8cc3ef;
+      --color-primary-soft:#16314d;
+      --color-accent:#8dc4ef;
+      --shadow-sm:0 10px 30px rgba(0,0,0,.25);
+      --shadow-md:0 18px 50px rgba(0,0,0,.35);
+    
+  --logo-wordmark-color:#f3f6fb;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+    body{min-height:100vh;font-family:var(--font-body);font-size:16px;line-height:1.65;background:
+      radial-gradient(circle at 88% 10%, rgba(43,123,187,.14), transparent 20%),
+      radial-gradient(circle at 12% 0%, rgba(21,90,156,.07), transparent 24%),
+      linear-gradient(180deg, var(--color-bg) 0%, #f7f9fc 38%, var(--color-bg) 100%);
+      color:var(--color-text)}
+    [data-theme="dark"] body{background:
+      radial-gradient(circle at 88% 10%, rgba(108,174,230,.12), transparent 20%),
+      radial-gradient(circle at 12% 0%, rgba(141,196,239,.08), transparent 24%),
+      linear-gradient(180deg, #0e1726 0%, #101a2a 38%, #0e1726 100%)}
+    a,button{transition:all .18s cubic-bezier(.16,1,.3,1)}
+    a{color:inherit}
+    header{position:sticky;top:0;z-index:10;background:color-mix(in srgb, var(--color-bg) 84%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--color-divider)}
+    .container,.nav{width:min(1120px,calc(100% - 2rem));margin:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+    .brand{display:flex;align-items:center;gap:.8rem;font-weight:700;letter-spacing:.02em}
+    .mark{width:280px;height:auto;display:block}
+    .nav-links{display:flex;align-items:center;gap:1rem}
+    .nav-links a{text-decoration:none;color:var(--color-text-muted);font-size:.95rem}
+    .nav-links a:hover{color:var(--color-text)}
+    .theme-toggle{display:grid;place-items:center;width:44px;height:44px;border-radius:999px;border:1px solid var(--color-border);background:var(--color-surface);color:var(--color-text)}
+    main{position:relative}
+    .hero,.section{padding:clamp(3.5rem,8vw,6rem) 0}
+    .hero{padding-top:clamp(4rem,10vw,7rem)}
+    .hero-grid,.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr);gap:var(--space-8);align-items:end}
+    .eyebrow,.kicker{display:inline-flex;align-items:center;gap:.45rem;border-radius:999px;padding:.4rem .78rem;font-size:.75rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .eyebrow{background:var(--color-primary-soft);color:var(--color-primary)}
+    .kicker{padding:0;background:none;color:var(--color-text-faint)}
+    .display{margin-top:1rem;max-width:9ch;font-family:var(--font-display);font-size:clamp(2.55rem,5.8vw,4.9rem);line-height:.94;letter-spacing:-.05em;font-weight:800}
+    .subheadline{margin-top:.8rem;max-width:24ch;font-family:var(--font-display);font-size:clamp(1.08rem,2vw,1.45rem);line-height:1.22;letter-spacing:-.025em;font-weight:600;color:color-mix(in srgb,var(--color-text) 88%, transparent)}
+    .lede,.muted{color:var(--color-text-muted)}
+    .lede{max-width:70ch;margin-top:1.2rem}
+    .hero-copy{position:relative}
+    .hero-copy::after{content:"";position:absolute;right:-4rem;top:1.5rem;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle, rgba(21,90,156,.11), transparent 68%);pointer-events:none;filter:blur(12px)}
+    .actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.7rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.95rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid transparent}
+    .btn.primary{background:var(--color-primary);color:#fff}
+    .btn.primary:hover{background:var(--color-primary-hover)}
+    .btn.secondary{background:var(--color-surface);border-color:var(--color-border);color:var(--color-text)}
+    .hero-aside,.panel,.service,.timeline-item,.contact{background:color-mix(in srgb, var(--color-surface) 92%, transparent);border:1px solid var(--color-border);box-shadow:var(--shadow-sm)}
+    .hero-aside{padding:1.5rem;border-radius:var(--radius-lg);position:relative;overflow:hidden}
+    .hero-aside::before{content:"";position:absolute;inset:auto -40px -50px auto;width:180px;height:180px;background:radial-gradient(circle, rgba(43,123,187,.12), transparent 68%);pointer-events:none}
+    .stat{padding:0 0 1rem;border-bottom:1px solid var(--color-divider);margin-bottom:1rem;position:relative}
+    .stat:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}
+    .stat strong{display:block;font-size:1.4rem;line-height:1.08;font-family:var(--font-display);letter-spacing:-.03em;font-weight:700}
+    .section-head{margin-bottom:1.7rem;max-width:760px}
+    .section-head h2{margin:.35rem 0 0;font-family:var(--font-display);font-size:clamp(1.9rem,3.8vw,2.9rem);line-height:1.02;letter-spacing:-.04em;font-weight:800}
+    .section-head p:last-child{margin-top:.75rem}
+    .panels{display:grid;grid-template-columns:1.05fr .95fr 1fr;gap:1rem}
+    .panel,.service,.timeline-item,.contact{padding:1.4rem;border-radius:22px}
+    .panel h3,.service h3,.contact h3,.timeline-item h3{margin-top:.5rem;font-size:1.24rem;line-height:1.2}
+    .panel.featured{background:linear-gradient(180deg,color-mix(in srgb,var(--color-primary-soft) 70%, var(--color-surface)),var(--color-surface));transform:none}
+    .service-grid,.timeline{display:grid;gap:1rem}
+    .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .service ul{padding-left:1.1rem;margin-top:.75rem;color:var(--color-text-muted)}
+    .service li+li{margin-top:.28rem}
+    .timeline-item{display:grid;grid-template-columns:160px 1fr;gap:1rem;align-items:start}
+    .timeline-item time{font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-faint)}
+    .contact-grid{align-items:start}
+    .contact a{color:var(--color-primary)}
+    footer{padding:2rem 0 3rem;color:var(--color-text-faint);font-size:.95rem}
+    .section.rule{padding-top:3rem;border-top:1px solid var(--color-divider)}
+    @media (max-width:920px){
+      .hero-grid,.contact-grid,.panels,.service-grid,.timeline-item{grid-template-columns:1fr}
+      .display{max-width:8ch;font-size:clamp(2.25rem,11vw,3.8rem)}
+      .subheadline{max-width:18ch;font-size:clamp(1rem,5vw,1.35rem)}
+      .nav-links a{display:none}
+      .hero-copy::after{display:none}
+      .panel.featured{transform:none}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 780 180" aria-label="LAB PRIME logo" role="img">
+  <defs>
+    <linearGradient id="lpFrameSpace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F4F8A"/>
+      <stop offset="100%" stop-color="#0D7B72"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 18)">
+    <rect x="0" y="0" width="88" height="88" rx="22" fill="none" stroke="url(#lpFrameSpace)" stroke-width="5"/>
+    <path d="M22 22V74H54" fill="none" stroke="#0F4F8A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M34 24H60C70 24 76 30 76 40C76 50 70 56 60 56H34" fill="none" stroke="#0D7B72" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="53" y="63" width="16" height="16" rx="4" fill="#D9E7F2"/>
+  </g>
+  <g transform="translate(124 30)">
+    <text x="0" y="44" font-family="'Cabinet Grotesk','General Sans',system-ui,sans-serif" font-size="42" font-weight="800" letter-spacing="5" fill="var(--logo-wordmark-color, #162338)">LAB PRIME</text>
+    <text x="0" y="72" font-family="'General Sans',system-ui,sans-serif" font-size="13" font-weight="600" letter-spacing="5" fill="#5E6F83">SCIENCE OPERATIONS CONSULTANCY</text>
+  </g>
+</svg>
+      
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
+    </div>
+  </nav>
+</header>
+<main class="container">
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Science operations, done properly</span>
+        <h1 class="display">LAB PRIME</h1>
+        <p class="subheadline">Helping research-driven organisations design, stabilise, and improve laboratory operations.</p>
+        <p class="lede">We support biotech, research, and innovation environments across lab operations, technical infrastructure, cold storage resilience, stakeholder alignment, and project delivery. Founded by Matteo Battilocchi, LAB PRIME brings together hands-on operational leadership and a wider network of specialist expertise to deliver practical control, calm execution, and operational realism in complex scientific environments.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Discuss a project with us</a>
+          <a class="btn secondary" href="#services">View services</a>
+        </div>
+      </div>
+      <aside class="hero-aside">
+        <p class="kicker">Founded by Matteo Battilocchi</p>
+        <div class="stat"><strong>Lab operations</strong><span class="muted">Operational planning, relocations, equipment coordination, vendor management.</span></div>
+        <div class="stat"><strong>Infrastructure</strong><span class="muted">Cold storage, facilities interfaces, technical readiness, risk reduction.</span></div>
+        <div class="stat"><strong>Delivery</strong><span class="muted">Cross-functional communication, structured execution, calm problem solving.</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section rule">
+    <div class="section-head">
+      <p class="kicker">Positioning</p>
+      <h2>A consultancy look with more depth, not more noise.</h2>
+      <p class="muted">LAB PRIME supports research-driven organisations with practical expertise across laboratory operations, technical infrastructure, cold storage resilience, project delivery, and cross-functional coordination in complex scientific environments.</p>
+    </div>
+    <div class="panels">
+      <article class="panel featured"><p class="kicker">For founders</p><h3>Startup build-outs</h3><p class="muted">Translate early growth plans into practical facility, equipment, and lab support decisions before friction compounds.</p></article>
+      <article class="panel"><p class="kicker">For institutes</p><h3>Operational stabilisation</h3><p class="muted">Improve reliability, maintenance planning, space use, and ownership across shared technical environments.</p></article>
+      <article class="panel"><p class="kicker">For project teams</p><h3>Delivery under pressure</h3><p class="muted">Bring structure to moves, installs, upgrades, and multi-stakeholder projects that are drifting or blocked.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="section-head">
+      <p class="kicker">Services</p>
+      <h2>Where we add value.</h2>
+      <p class="muted">We focus on the operational middle: the space between scientific teams, estates, vendors, and leadership where projects either become controlled or become painful.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service"><p class="kicker">01</p><h3>Lab and facility operations</h3><p class="muted">We support day-to-day operational control in research and biotech settings where reliability matters.</p><ul><li>Operational reviews and issue mapping.</li><li>Cold storage and equipment uptime planning.</li><li>Vendor, service, and maintenance coordination.</li><li>Incident follow-up and corrective action structure.</li></ul></article>
+      <article class="service"><p class="kicker">02</p><h3>Projects and technical readiness</h3><p class="muted">We provide structured support for changes that cut across labs, estates, facilities, and users.</p><ul><li>Lab relocations, refurbishments, and decant planning.</li><li>Equipment installation readiness and utilities coordination.</li><li>Stakeholder mapping, governance, and delivery tracking.</li><li>Risk registers and practical mitigation plans.</li></ul></article>
+      <article class="service"><p class="kicker">03</p><h3>Science infrastructure advisory</h3><p class="muted">We advise where research environments need both technical understanding and operational realism.</p><ul><li>Lab workflow and space-use assessment.</li><li>BMS and facilities interface translation for scientific users.</li><li>Procurement support for specialist equipment and services.</li><li>Operational handover planning for new or refurbished areas.</li></ul></article>
+      <article class="service"><p class="kicker">04</p><h3>Interim leadership support</h3><p class="muted">We provide short-term cover where an organisation needs experienced operators to steady delivery.</p><ul><li>Temporary lab operations management.</li><li>Cross-team coordination during transition periods.</li><li>Priority setting for overloaded teams.</li><li>Clear reporting for senior stakeholders.</li></ul></article>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-head">
+      <p class="kicker">Experience narrative</p>
+      <h2>Built around credibility, clarity, and implementation.</h2>
+      <p class="muted">LAB PRIME is built by professionals who have run laboratories inside complex research institutions — not just advised from the outside. Our work is pragmatic, calm, and grounded in real operational experience. We focus on what actually works, delivering measurable improvements without disrupting science.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item"><time>Founder</time><div><h3>Matteo Battilocchi, founder</h3><p class="muted">Matteo leads LAB PRIME and brings senior laboratory operations experience from the Francis Crick Institute and King’s College London across cold storage, compliance, technical support, lab operations, and cross-functional project delivery.</p></div></article>
+      <article class="timeline-item"><time>Core strength</time><div><h3>Bridging scientific users and infrastructure functions</h3><p class="muted">We work comfortably between researchers, facilities, estates, procurement, vendors, and leadership, which is exactly where many lab projects fail if nobody owns the operational middle.</p></div></article>
+      <article class="timeline-item"><time>Team model</time><div><h3>A core founder-led team with specialist experts available</h3><p class="muted">LAB PRIME is designed as a lean consultancy with founder leadership, core partners, and access to a wider network of specialist advisors across engineering, facilities, compliance, and technical operations.</p></div></article>
+      <article class="timeline-item"><time>Operating style</time><div><h3>Structured, analytical, low-drama delivery</h3><p class="muted">LAB PRIME works best where scientific ambition meets operational complexity, bringing practical structure, technical understanding, and dependable delivery to environments that cannot afford avoidable disruption.</p></div></article>
+      <article class="timeline-item"><time>Use cases</time><div><h3>Best fit for scaling, changing, or stressed environments</h3><p class="muted">That includes startups building lab capability, institutes coordinating shared infrastructure, and teams handling moves, upgrades, backlog, audit pressure, and service instability.</p></div></article>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="contact-grid">
+      <div class="section-head">
+        <p class="kicker">Contact</p>
+        <h2>Contact LAB PRIME.</h2>
+        <p class="muted">This site introduces LAB PRIME and how we work. For project discussions or partnership enquiries, please use the contact details below.</p>
+      </div>
+      <aside class="contact">
+        <p class="kicker">Contact details</p>
+        <h3>Speak with LAB PRIME</h3>
+        <p class="muted">Email: <a href="mailto:matteo.battilocchi@gmail.com">matteo.battilocchi@gmail.com</a></p>
+        <p class="muted">Phone / WhatsApp: <a href="tel:+447928594893">+44 7928 594893</a></p>
+        <p class="muted"><a href="https://www.linkedin.com/in/matteo-battilocchi-a891387a" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer><div class="container">Designed as the first branded website for LAB PRIME, founded by Matteo Battilocchi.</div></footer>
+<script>
+(function(){
+  const btn=document.querySelector('[data-theme-toggle]');
+  const root=document.documentElement;
+  let theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  root.setAttribute('data-theme',theme);
+  const render=()=>{btn.textContent=theme==='dark'?'☼':'◐';btn.setAttribute('aria-label','Switch to '+(theme==='dark'?'light':'dark')+' mode');};
+  render();
+  btn.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);render();});
+})();
+</script>
+</body>
+</html>
