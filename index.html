@@ -97,12 +97,13 @@
     .section-head{margin-bottom:1.7rem;max-width:760px}
     .section-head h2{margin:.35rem 0 0;font-family:var(--font-display);font-size:clamp(1.9rem,3.8vw,2.9rem);line-height:1.02;letter-spacing:-.04em;font-weight:800}
     .section-head p:last-child{margin-top:.75rem}
-    .panels{display:grid;grid-template-columns:1.05fr .95fr 1fr;gap:1rem}
+    .panels{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     .panel,.service,.timeline-item,.contact{padding:1.4rem;border-radius:22px}
     .panel h3,.service h3,.contact h3,.timeline-item h3{margin-top:.5rem;font-size:1.24rem;line-height:1.2}
     .panel.featured{background:linear-gradient(180deg,color-mix(in srgb,var(--color-primary-soft) 70%, var(--color-surface)),var(--color-surface));transform:none}
     .service-grid,.timeline{display:grid;gap:1rem}
     .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .service-grid .service:nth-child(5){grid-column:1 / -1}
     .service ul{padding-left:1.1rem;margin-top:.75rem;color:var(--color-text-muted)}
     .service li+li{margin-top:.28rem}
     .timeline-item{display:grid;grid-template-columns:160px 1fr;gap:1rem;align-items:start}
@@ -110,6 +111,7 @@
     .contact-grid{align-items:start}
     .contact a{color:var(--color-primary)}
     footer{padding:2rem 0 3rem;color:var(--color-text-faint);font-size:.95rem}
+    footer .footer-legal{font-size:.8rem;font-style:italic;color:var(--color-text-faint);margin-top:.5rem;opacity:.75}
     .section.rule{padding-top:3rem;border-top:1px solid var(--color-divider)}
     @media (max-width:920px){
       .hero-grid,.contact-grid,.panels,.service-grid,.timeline-item{grid-template-columns:1fr}
@@ -186,6 +188,7 @@
       <article class="panel featured"><p class="kicker">For founders</p><h3>Startup build-outs</h3><p class="muted">Translate early growth plans into practical facility, equipment, and lab support decisions before friction compounds.</p></article>
       <article class="panel"><p class="kicker">For institutes</p><h3>Operational stabilisation</h3><p class="muted">Improve reliability, maintenance planning, space use, and ownership across shared technical environments.</p></article>
       <article class="panel"><p class="kicker">For project teams</p><h3>Delivery under pressure</h3><p class="muted">Bring structure to moves, installs, upgrades, and multi-stakeholder projects that are drifting or blocked.</p></article>
+          <article class="panel"><p class="kicker">For science technology companies</p><h3>Deploying into complex research environments</h3><p class="muted">We act as your on-the-ground project partner at research sites — coordinating the client side so your system installs cleanly and gets properly adopted.</p></article>
     </div>
   </section>
 
@@ -200,6 +203,7 @@
       <article class="service"><p class="kicker">02</p><h3>Projects and technical readiness</h3><p class="muted">We provide structured support for changes that cut across labs, estates, facilities, and users.</p><ul><li>Lab relocations, refurbishments, and decant planning.</li><li>Equipment installation readiness and utilities coordination.</li><li>Stakeholder mapping, governance, and delivery tracking.</li><li>Risk registers and practical mitigation plans.</li></ul></article>
       <article class="service"><p class="kicker">03</p><h3>Science infrastructure advisory</h3><p class="muted">We advise where research environments need both technical understanding and operational realism.</p><ul><li>Lab workflow and space-use assessment.</li><li>BMS and facilities interface translation for scientific users.</li><li>Procurement support for specialist equipment and services.</li><li>Operational handover planning for new or refurbished areas.</li></ul></article>
       <article class="service"><p class="kicker">04</p><h3>Interim leadership support</h3><p class="muted">We provide short-term cover where an organisation needs experienced operators to steady delivery.</p><ul><li>Temporary lab operations management.</li><li>Cross-team coordination during transition periods.</li><li>Priority setting for overloaded teams.</li><li>Clear reporting for senior stakeholders.</li></ul></article>
+      <article class="service"><p class="kicker">05</p><h3>Installation support for science technology providers</h3><p class="muted">We act as the on-the-ground project partner for science technology companies deploying into research institutions.</p><ul><li>Client-side project management for system installations at research sites.</li><li>Coordination across facilities, science, H&amp;S, and procurement teams.</li><li>Acceptance testing, user onboarding, and post-installation integration.</li><li>A single experienced point of contact who speaks both technology and lab operations.</li></ul></article>
     </div>
   </section>
 
@@ -235,7 +239,7 @@
     </div>
   </section>
 </main>
-<footer><div class="container">Designed as the first branded website for LAB PRIME, founded by Matteo Battilocchi.</div></footer>
+<footer><div class="container"><p class="footer-legal">&copy; 2026 LAB PRIME. Consultancy services provided by Matteo Battilocchi, trading as LAB PRIME.</p></div></footer>
 <script>
 (function(){
   const btn=document.querySelector('[data-theme-toggle]');
